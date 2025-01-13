@@ -201,9 +201,9 @@ class MainWindow(QMainWindow):
         right_nav = QHBoxLayout()
         
         # Profile logo (as an icon or text placeholder)
-        # profile_logo = QLabel("👤")  
-        # profile_logo.setStyleSheet("font-size: 20px; padding-right: 10px")
-        # right_nav.addWidget(profile_logo)
+        profile_logo = QLabel("UserName")  
+        profile_logo.setStyleSheet("font-size: 20px; padding-right: 10px")
+        right_nav.addWidget(profile_logo)
         
         # Settings button
         self.prflBtn = QPushButton()
