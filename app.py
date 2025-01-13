@@ -202,7 +202,7 @@ class MainWindow(QMainWindow):
         
         # Profile logo (as an icon or text placeholder)
         profile_logo = QLabel("UserName")  
-        profile_logo.setStyleSheet("font-size: 20px; padding-right: 10px")
+        profile_logo.setStyleSheet("font-size: 20px; padding-right: 10px;color:black;font-weight:bold")
         right_nav.addWidget(profile_logo)
         
         # Settings button
@@ -227,7 +227,7 @@ class MainWindow(QMainWindow):
         # creating pages
         # QStackedWidget : to manage multiple pages, switching between them
         self.pages = QStackedWidget()  # initialized the StackWidget
-        pagesTextList = ["Home Page", "PosTerminal page", "Orders Page", "Products page", "Customer page", "Staff Page","Setting page","Profile"]
+        pagesTextList = ["Home Page", "Orders Page", "PosTerminal page", "Products page", "Customer page", "Staff Page","Setting page","Profile"]
 
         for c in pagesTextList:
             self.pages.addWidget(self.create_page(c))
@@ -257,6 +257,7 @@ class MainWindow(QMainWindow):
         page = QWidget()
         layout = QVBoxLayout()
         label = QLabel(text)
+        label.setStyleSheet("color:black;font-size:20px")
         label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         layout.addWidget(label)
         page.setLayout(layout)
