@@ -9,6 +9,15 @@
         "documentation": {}
     },
     {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
         "label": "QApplication",
         "importPath": "PyQt6.QtWidgets",
         "description": "PyQt6.QtWidgets",
@@ -110,6 +119,15 @@
         "importPath": "app",
         "description": "app",
         "peekOfCode": "class MainWindow(QMainWindow):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Base App\")\n        # self.resize(800,600)\n        self.resize(1480,680)\n        # navbar layout\n        navBar = QHBoxLayout()  # QHBoxLayout to arrange the buttons horizontally\n        # Left side: Logo + Navigation buttons\n        left_nav = QHBoxLayout()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "resource_path",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def resource_path(relative_path):\n    \"\"\"Get the absolute path to a resource, works for dev and PyInstaller.\"\"\"\n    # If running as a bundled app, _MEIPASS is where PyInstaller stores temp files\n    base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))\n    return os.path.join(base_path, relative_path)\nclass MainWindow(QMainWindow):\n    def __init__(self):\n        super().__init__()\n        self.setWindowTitle(\"Base App\")\n        # self.resize(800,600)",
         "detail": "app",
         "documentation": {}
     }
